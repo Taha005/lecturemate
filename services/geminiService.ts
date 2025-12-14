@@ -58,11 +58,11 @@ export const generateSpeech = async (text: string): Promise<string> => {
   return data.audioData;
 };
 
-export const evaluateExplanation = async (topic: string, userExplanation: string): Promise<any> => {
+export const evaluateExplanation = async (topic: string, userExplanation: string, transcript: string): Promise<any> => {
   const response = await fetch('/api/evaluate-explanation', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ topic, userExplanation })
+    body: JSON.stringify({ topic, userExplanation, transcript })
   });
 
   if (!response.ok) throw new Error("Failed to evaluate explanation");

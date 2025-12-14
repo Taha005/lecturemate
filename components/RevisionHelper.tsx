@@ -37,7 +37,7 @@ export const RevisionHelper: React.FC<RevisionHelperProps> = ({ data, onNavigate
   const handleTeachSubmit = async () => {
       setIsEvaluating(true);
       try {
-          const result = await evaluateExplanation(data.topicName, teachInput);
+          const result = await evaluateExplanation(data.topicName, teachInput, data.transcript);
           setTeachFeedback(result);
       } catch (e) {
           alert("Error evaluating answer");

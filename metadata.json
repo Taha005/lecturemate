@@ -1,0 +1,5 @@
+{
+  "name": "LectureMate AI",
+  "description": "An AI-powered lecture summarizer and revision helper that transforms notes, images, and links into concise summaries and study aids.",
+  "requestFramePermissions": []
+}
